@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
+		<meta lang="pt">
+		<title>PrisonBreak</title>
+			<!--testar -->	
+		<link rel="stylesheet" href="../../style/estilo.css"> 
+	</head>
+	<body>		
+	<div id="inicio"></div>
+		<div class="fundo">
+			<header id="heads" class="header">
+				<div class="headerbox-container"> <!-- Total do header todo -->
+					<div class="logo">  <!-- Manter no canto esquero em cima -->
+						<a href="../../Mr Series.html"><img src="../../Logo.png"></a>
+					</div>
+					<div class="main-nav"> <!--À direita logo aseguir ao logo (float:left) -->
+						<ul class="menu-principal"> <!--Alterar o link da homepage no fim-->
+							<li><a href="../../Mr Series.html" class="menu">Inicio</a></li> <!-- ../= move back 1 folder -->
+							<li><a href="../../Categorias.html" class="menu">Categorias</a></li>
+							<li><a href="../../Series.html" class="menu">Series</a></li>
+							<li><a href="../../Filmes.html" class="menu">Filmes</a></li>
+							<form method="get" id="searchform" action="*link do site">
+								<input type="text" placeholder="Procurar" name="s" id="s" autocomplete="off"> <!-- Os sites tem value mas n sei para que -->
+								<button class="search-button" type="submit"><span>Pesquisar</span></button>
+							</form>
+						</ul>
+					</div>
+				</div>
+			</header>
+				<section class="module" id="container" "> <!--Conteudo -->
+					<fieldset  class="grid"> <!-- fazer grid? -->
+						<img src="../../imagseries/Pbreak.jpg" class="imagem-principal-resumo">
+						<div class="TextoGrid" ><h2>Prison Break</h2>
+							<h6>Lançamento:29/08/2005 <span class="tab"></span> 90 Episodios - 44mins por episodio </h6>
+							<h6>Ação Crime Drama</h6><!--Titulo, em pequeno data de lançamento, tempo (filme), duraçao de episodio e n de eps se for serie, e genero -->
+							<p>Prison Break (Fuga da Prisão) é uma aclamada série de televisão norte-americana de ação, 
+							crime e drama transmitida originalmente pela Fox desde 29 de agosto de 2005. Em 2015, a Fox anunciou uma quinta 
+							temporada com 9 episódios, que estreou a 4 de abril de 2017. A FOX confirmou, recentemente, a produção da sexta 
+							temporada da série, mas não divulgou muitos detalhes a respeito.<br>
+							A história gira em torno de Lincoln Burrows, um homem que foi sentenciado à morte por supostamente 
+							ter assassinado o irmão da vice-presidente dos EUA, e seu irmão, Michael Scofield, um engenheiro civil, que 
+							cria um plano para resgatá-lo da prisão antes que seja executado. Michael, considerado um gênio criativo por 
+							seu psiquiatra, tatua o mapa do presídio (camuflado por outras imagens) no corpo e assalta um banco para, assim 
+							ser preso e enviado para a Penitenciária Estadual de Fox River, onde seu irmão está no corredor da morte.</p>
+							<p>Para mais informação visitar <a href="https://pt.wikipedia.org/wiki/Prison_Break">Prison Break wiki</a> ou 
+							<a href="https://www.imdb.com/title/tt0455275/">Prison Break IMDb</a> </p>
+						</div> <!-- video - controls + source src -> local e <iref para internet -->
+						<iframe width="800" height="519" src="https://www.youtube.com/embed/7DQ-87kLpX4" 
+						title="Prison Break Season 1 Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+						encrypted-media; gyroscope; picture-in-picture" allowfullscreen>Erro na conecção a internet
+						</iframe>
+						<div class="slideshow">
+							<div class="slide-wrapper">
+								<div class="image-container"><img src="prisonbreakcast.jpg" height=" 80%" width="90%"></div><!--temporario tamanho --> 
+								<div class="image-container"><img src="prisonbreakgang.jpg" height=" 80%" width="90%"></div>
+								<div class="image-container"><img src="prisonbreak1.jpg" height=" 80%" width="90%"></div>
+								<div class="image-container"><img src="prisonbreak2.jpg" height=" 80%" width="90%"></div>
+							</div>
+						</div>
+					</fieldset>
+				</section>
+		</div>
+			<footer class="footer">
+				<div class="dataInfo">2022, Site de informação</div>
+				<span class="top-page"><!--alinhado a direita e padding para centrar -->
+				<button id="cima" onclick="topFunction()">topo</button><!--Meter a direita, botao para ir para cima -->
+			</footer>
+		</div>
+		<script>
+			window.onscroll = function() {myFunction()};
+			
+			var heads = document.getElementById("heads");
+			var sticky = heads.offsetTop;
+			
+			function myFunction() {
+			  if (window.pageYOffset >= sticky) {
+				heads.classList.add("sticky")
+			  } else {
+				heads.classList.remove("sticky");
+			  }
+			}
+			let mybutton = document.getElementById("cima");
+
+			window.onscroll = function() {scrollFunction()};
+
+			function scrollFunction() {
+			if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+				mybutton.style.display = "block";
+			} else {
+				mybutton.style.display = "none";
+			}
+			}
+
+			function topFunction() {
+			document.body.scrollTop = 0;
+			document.documentElement.scrollTop = 0;
+			}
+			</script>
+	</body>
+</html>

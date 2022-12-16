@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
+		<meta lang="pt">
+		<title>Simpsons</title>
+			<!--testar -->	
+		<link rel="stylesheet" href="../../style/estilo.css"> 
+	</head>
+	<body>		
+	<div id="inicio"></div>
+		<div class="fundo">
+			<header id="heads" class="header">
+				<div class="headerbox-container"> <!-- Total do header todo -->
+					<div class="logo">  <!-- Manter no canto esquero em cima -->
+						<a href="../../Mr Series.html"><img src="../../Logo.png"></a>
+					</div>
+					<div class="main-nav"> <!--À direita logo aseguir ao logo (float:left) -->
+						<ul class="menu-principal"> 
+							<li><a href="../../Mr Series.html" class="menu">Inicio</a></li> <!-- ../= move back 1 folder -->
+							<li><a href="../../Categorias.html" class="menu">Categorias</a></li>
+							<li><a href="../../Series.html" class="menu">Series</a></li>
+							<li><a href="../../Filmes.html" class="menu">Filmes</a></li>
+							<form method="get" id="searchform" action="*link do site">
+								<input type="text" placeholder="Procurar" name="s" id="s" autocomplete="off"> <!-- Os sites tem value mas n sei para que -->
+								<button class="search-button" type="submit"><span>Pesquisar</span></button>
+							</form>
+						</ul>
+					</div>
+				</div>
+			</header>
+				<section class="module" id="container" "> <!--Conteudo -->
+					<fieldset  class="grid"> <!-- fazer grid? -->
+						<img src="../../imagseries/Simpsons.jpg" class="imagem-principal-resumo">
+						<div class="TextoGrid"><h2>The Simpsons</h2>
+							<h6>Lançamento:17/12/1989 <span class="tab"></span> 733 Episodio - 22mins </h6>
+							<h6>Comedia  </h6><!--Titulo, em pequeno data de lançamento, tempo (filme), duraçao de episodio e n de eps se for serie, e genero -->
+							<p>The Simpsons (Em Portugues: Os Simpsons) é uma série de animação e sitcom norte-americana criada por Matt Groening 
+							para a Fox Broadcasting Company.A série é uma paródia satírica do estilo de vida da classe média dos Estados Unidos 
+							(como cultura, sociedade e televisão) e aspectos da condição humana, através da família protagonista, que consiste de Homer Jay 
+							Simpson, Marjorie (Marge) Bouvier Simpson, Bartholomew (Bart) Simpson, Elisabeth (Lisa) Marie Simpson e Margareth (Maggie) Simpson, 
+							cuja vida se passa na fictícia cidade de Springfield.</p>
+							<p>The Simpsons é amplamente considerada como uma das maiores séries de televisão de todos os tempos. A edição da revista Time publicada
+							em 31 de dezembro de 1999 classificou a série como a melhor do século XX, e em 14 de janeiro de 2000, a animação foi homenageada com 
+							uma estrela na Calçada da Fama de Hollywood, na Califórnia. A série já venceu inúmeros prêmios desde a sua estreia, incluindo 31 Primetime
+							Emmy Awards, 30 prêmios Annie e um prêmio Peabody. A expressão utilizada por Homer, "D'oh", foi incluída no Oxford English Dictionary, enquanto 
+							a série tem influenciado várias sitcoms direcionadas ao público adulto.</p>
+							<p>Para mais informação visitar <a href="https://pt.wikipedia.org/wiki/Os_Simpsons">Simpsons wiki</a> ou 
+							<a href="https://www.imdb.com/title/tt0096697/?ref_=nv_sr_srsg_0">Simpsons IMDb</a> </p>
+						</div> <!-- video - controls + source src -> local e <iref para internet -->
+						<iframe width="705" height="419" src="https://www.youtube.com/embed/M8wctVg9zS4" title="The Simpsons Coming To Disney+ Teaser Trailer" frameborder="0" 
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+						</iframe>
+						<div class="slideshow">
+							<div class="slide-wrapper">
+								<div class="image-container"></div>
+								<div class="image-container"></div>
+								<div class="image-container"></div>
+								<div class="image-container"></div>
+							</div>
+						</div>
+					</fieldset>
+				</section>
+		</div>
+			<footer class="footer">
+				<div class="dataInfo">2022, Site de informação</div>
+				<span class="top-page"><!--alinhado a direita e padding para centrar -->
+				<button id="cima" onclick="topFunction()">topo</button><!--Meter a direita, botao para ir para cima -->
+			</footer>
+		</div>
+		<script>
+			window.onscroll = function() {myFunction()};
+			
+			var heads = document.getElementById("heads");
+			var sticky = heads.offsetTop;
+			
+			function myFunction() {
+			  if (window.pageYOffset >= sticky) {
+				heads.classList.add("sticky")
+			  } else {
+				heads.classList.remove("sticky");
+			  }
+			}
+			let mybutton = document.getElementById("cima");
+
+			window.onscroll = function() {scrollFunction()};
+
+			function scrollFunction() {
+			if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+				mybutton.style.display = "block";
+			} else {
+				mybutton.style.display = "none";
+			}
+			}
+
+			function topFunction() {
+			document.body.scrollTop = 0;
+			document.documentElement.scrollTop = 0;
+			}
+			</script>
+	</body>
+</html>
