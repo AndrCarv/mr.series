@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
+		<meta lang="pt">
+		<title>Spiderman: Far from Home</title>
+			<!--testar -->	
+		<link rel="stylesheet" href="../../style/estilo.css"> 
+	</head>
+	<body>		
+	<div id="inicio"></div>
+		<div class="fundo">
+			<header id="heads" class="header">
+				<div class="headerbox-container"> <!-- Total do header todo -->
+					<div class="logo">  <!-- Manter no canto esquero em cima -->
+						<a href="../../Mr Series.html"><img src="../../Logo.png"></a>
+					</div>
+					<div class="main-nav"> <!--À direita logo aseguir ao logo (float:left) -->
+						<ul class="menu-principal"> 
+							<li><a href="../../Mr Series.html" class="menu">Inicio</a></li>
+							<li><a href="../../Categorias.html" class="menu">Categorias</a></li>
+							<li><a href="../../Series.html" class="menu">Series</a></li>
+							<li><a href="../../Filmes.html" class="menu">Filmes</a></li>
+							<form method="get" id="searchform" action="*link do site">
+								<input type="text" placeholder="Procurar" name="s" id="s" autocomplete="off"> <!-- Os sites tem value mas n sei para que -->
+								<button class="search-button" type="submit"><span>Pesquisar</span></button>
+							</form>
+						</ul>
+					</div>
+				</div>
+			</header>
+				<section class="module" id="container" "> <!--Conteudo -->
+					<fieldset  class="grid"> <!-- fazer grid? -->
+						<img src="../../imagfilmes/SpiderManFarFromHome.jpg" class="imagem-principal-resumo">
+						<div class="TextoGrid"><h2>Spiderman: Far from Home</h2>
+							<h6>Lançamento:04/07/2019	   <span class="tab"></span> 2h09mins </h6>
+							<h6>Ação  </h6><!--Titulo, em pequeno data de lançamento, tempo (filme), duraçao de episodio e n de eps se for serie, e genero -->
+							<p>Spider-Man: Far From Home (portugues: Homem-Aranha: Longe de Casa) é um filme de super-herói estadunidense de 2019, baseado no 
+							personagem Homem-Aranha da Marvel Comics, produzido pela Marvel Studios e Columbia Pictures e distribuído pela Sony Pictures Releasing, 
+							sendo a sequência de Spider-Man: Homecoming, de 2017, e o vigésimo terceiro filme do Universo Cinematográfico Marvel. Dirigido por Jon Watts 
+							e escrito por Chris McKenna e Erik Sommers, é estrelado por Tom Holland como Peter Parker / Homem-Aranha, ao lado de Samuel L. Jackson, Zendaya, 
+							Cobie Smulders, Jon Favreau, J. B. Smoove, Jacob Batalon, Martin Starr, Marisa Tomei e Jake Gyllenhaal. No filme, Parker é recrutado por Nick Fury e 
+							Mystério para enfrentar ameaças de outra dimensão enquanto ele está em uma viagem escolar para a Europa.</p>
+							<p>Homem-Aranha: Longe de Casa foi lançado nos Estados Unidos em 2 de julho de 2019 e no Brasil e em Portugal em 4 de julho de 2019 em formatos 
+							convencional, IMAX e 3D. Arrecadou mais de US$ 1,1 bilhão mundialmente, sendo a quarta maior bilheteria de 2019 e o primeiro filme do personagem a 
+							atingir tal marca. Os críticos consideraram o filme como uma "sequência divertida e satisfatória" e elogiaram as atuações do elenco, especialmente 
+							de Holland e Gyllenhaal.[4] Uma sequência, Spider-Man: No Way Home, foi lançada em 17 de dezembro de 2021 nos Estados Unidos</p>
+							<p>Para mais informação visitar <a href="https://pt.wikipedia.org/wiki/Homem-Aranha:_Longe_de_Casa">Spiderman: Far from Home wiki</a> ou 
+							<a href="https://www.imdb.com/title/tt6320628/?ref_=nv_sr_srsg_0">Spiderman: Far from Home IMDb</a> </p>
+						</div> <!-- video - controls + source src -> local e <iref para internet -->
+						<iframe width="800" height="519" src="https://www.youtube.com/embed/Nt9L1jCKGnE" title="SPIDER-MAN: FAR FROM HOME - Official Trailer" 
+						frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+						Internet em baixo</iframe>
+						<div class="slideshow">
+							<div class="slide-wrapper">
+								<div class="image-container"></div>
+								<div class="image-container"></div>
+								<div class="image-container"></div>
+								<div class="image-container"></div>
+							</div>
+						</div>
+					</fieldset>
+				</section>
+		</div>
+			<footer class="footer">
+				<div class="dataInfo">2022, Site de informação</div>
+				<span class="top-page"><!--alinhado a direita e padding para centrar -->
+				<button id="cima" onclick="topFunction()">topo</button><!--Meter a direita, botao para ir para cima -->
+			</footer>
+		</div>
+		<script>
+			window.onscroll = function() {myFunction()};
+			
+			var heads = document.getElementById("heads");
+			var sticky = heads.offsetTop;
+			
+			function myFunction() {
+			  if (window.pageYOffset >= sticky) {
+				heads.classList.add("sticky")
+			  } else {
+				heads.classList.remove("sticky");
+			  }
+			}
+			let mybutton = document.getElementById("cima");
+
+			window.onscroll = function() {scrollFunction()};
+
+			function scrollFunction() {
+			if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+				mybutton.style.display = "block";
+			} else {
+				mybutton.style.display = "none";
+			}
+			}
+
+			function topFunction() {
+			document.body.scrollTop = 0;
+			document.documentElement.scrollTop = 0;
+			}
+			</script>
+	</body>
+</html>

@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
+		<meta lang="pt">
+		<title>Spiderman No Way Home</title>
+			<!--testar -->	
+		<link rel="stylesheet" href="../../style/estilo.css"> 
+	</head>
+	<body>		
+	<div id="inicio"></div>
+		<div class="fundo">
+			<header id="heads" class="header">
+				<div class="headerbox-container"> <!-- Total do header todo -->
+					<div class="logo">  <!-- Manter no canto esquero em cima -->
+						<a href="../../Mr Series.html"><img src="../../Logo.png"></a>
+					</div>
+					<div class="main-nav"> <!--À direita logo aseguir ao logo (float:left) -->
+						<ul class="menu-principal"> <!--Alterar o link da homepage no fim-->
+							<li><a href="../../Mr Series.html" class="menu">Inicio</a></li> <!-- ../= move back 1 folder -->
+							<li><a href="../../Categorias.html" class="menu">Categorias</a></li>
+							<li><a href="../../Series.html" class="menu">Series</a></li>
+							<li><a href="../../Filmes.html" class="menu">Filmes</a></li>
+							<form method="get" id="searchform" action="*link do site">
+								<input type="text" placeholder="Procurar" name="s" id="s" autocomplete="off"> <!-- Os sites tem value mas n sei para que -->
+								<button class="search-button" type="submit"><span>Pesquisar</span></button>
+							</form>
+						</ul>
+					</div>
+				</div>
+			</header>
+				<section class="module" id="container" "> <!--Conteudo -->
+					<fieldset  class="grid"> <!-- fazer grid? -->
+						<img src="../../imagfilmes/SpiderManNoWayHome.jpg" class="imagem-principal-resumo">
+						<div class="TextoGrid"><h2>Spiderman: No Way Home</h2>
+							<h6>Lançamento:16/12/2021	   <span class="tab"></span> 2h48mins </h6>
+							<h6>Ação  </h6><!--Titulo, em pequeno data de lançamento, tempo (filme), duraçao de episodio e n de eps se for serie, e genero -->
+							<p>Spider-Man: No Way Home (portugues: Homem-Aranha: Sem Volta a Casa) é um filme norte-americano 
+							de super-herói de 2021 baseado no personagem Homem-Aranha da Marvel Comics, co-produzido pela Columbia Pictures e Marvel Studios, 
+							e distribuído pela Sony Pictures Releasing. É a sequência de Spider-Man: Homecoming (2017) e Spider-Man: Far From Home (2019), e o 
+							vigésimo sétimo filme do Universo Cinematográfico Marvel (UCM). Dirigido por Jon Watts e escrito por Chris McKenna e Erik Sommers, o 
+							filme é estrelado por Tom Holland como Peter Parker / Homem-Aranha, ao lado de Zendaya, Benedict Cumberbatch, Jacob Batalon, Jon Favreau, 
+							Jamie Foxx, Willem Dafoe, Alfred Molina, Benedict Wong, Tony Revolori, Marisa Tomei, Andrew Garfield e Tobey Maguire. 
+							No filme, Parker pede ajuda ao Dr. Stephen Strange (Cumberbatch) para tornar sua identidade como Homem-Aranha um segredo novamente com magia, 
+							o que leva à abertura do multiverso, permitindo que supervilões de realidades alternativas entrem no universo de Parker.</p>
+							<p>Spider-Man: No Way Home estreou no Fox Village Theatre em Los Angeles em 13 de dezembro de 2021, e foi lançado nos Estados Unidos em 17 
+							de dezembro de 2021 como parte da Fase Quatro do UCM; no Brasil e em Portugal foi lançado em 16 de dezembro.O filme recebeu avaliações positivas 
+							da crítica e do público, com elogios sendo direcionados à história, direção, as sequências de ação, profundidade emocional, performances e química 
+							do elenco. </p>
+							<p>Para mais informação visitar <a href="https://pt.wikipedia.org/wiki/Spider-Man:_No_Way_Home">Spiderman: No Way Home wiki</a> ou 
+							<a href="https://www.imdb.com/title/tt10872600/?ref_=fn_al_tt_1">Spiderman: No Way Home IMDb</a> </p>
+						</div> <!-- video - controls + source src -> local e <iref para internet -->
+						<iframe width="800" height="519" src="https://www.youtube.com/embed/JfVOs4VSpmA" title="SPIDER-MAN: NO WAY HOME - Official Trailer (HD)" frameborder="0" 
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+						Internet em baixo</iframe>
+						<div class="slideshow">
+							<div class="slide-wrapper">
+								<div class="image-container"></div>
+								<div class="image-container"></div>
+								<div class="image-container"></div>
+								<div class="image-container"></div>
+							</div>
+						</div>
+					</fieldset>
+				</section>
+		</div>
+			<footer class="footer">
+				<div class="dataInfo">2022, Site de informação</div>
+				<span class="top-page"><!--alinhado a direita e padding para centrar -->
+				<button id="cima" onclick="topFunction()">topo</button><!--Meter a direita, botao para ir para cima -->
+			</footer>
+		</div>
+		<script>
+			window.onscroll = function() {myFunction()};
+			
+			var heads = document.getElementById("heads");
+			var sticky = heads.offsetTop;
+			
+			function myFunction() {
+			  if (window.pageYOffset >= sticky) {
+				heads.classList.add("sticky")
+			  } else {
+				heads.classList.remove("sticky");
+			  }
+			}
+			let mybutton = document.getElementById("cima");
+
+			window.onscroll = function() {scrollFunction()};
+
+			function scrollFunction() {
+			if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+				mybutton.style.display = "block";
+			} else {
+				mybutton.style.display = "none";
+			}
+			}
+
+			function topFunction() {
+			document.body.scrollTop = 0;
+			document.documentElement.scrollTop = 0;
+			}
+			</script>
+	</body>
+</html>

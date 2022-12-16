@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
+		<meta lang="pt">
+		<title>Doctor Strange</title>
+			<!--testar -->	
+		<link rel="stylesheet" href="../../style/estilo.css"> 
+	</head>
+	<body>		
+	<div id="inicio"></div>
+		<div class="fundo">
+			<header id="heads" class="header">
+				<div class="headerbox-container"> <!-- Total do header todo -->
+					<div class="logo">  <!-- Manter no canto esquero em cima -->
+						<a href="../../Mr Series.html"><img src="../../Logo.png"></a>
+					</div>
+					<div class="main-nav"> <!--À direita logo aseguir ao logo (float:left) -->
+						<ul class="menu-principal"> <!--Alterar o link da homepage no fim-->
+							<li><a href="../../Mr Series.html" class="menu">Inicio</a></li> <!-- ../= move back 1 folder -->
+							<li><a href="../../Categorias.html" class="menu">Categorias</a></li>
+							<li><a href="../../Series.html" class="menu">Series</a></li>
+							<li><a href="../../Filmes.html" class="menu">Filmes</a></li>
+							<form method="get" id="searchform" action="*link do site">
+								<input type="text" placeholder="Procurar" name="s" id="s" autocomplete="off"> <!-- Os sites tem value mas n sei para que -->
+								<button class="search-button" type="submit"><span>Pesquisar</span></button>
+							</form>
+						</ul>
+					</div>
+				</div>
+			</header>
+				<section class="module" id="container" "> <!--Conteudo -->
+					<fieldset  class="grid"> <!-- fazer grid? -->
+						<img src="../../imagfilmes/DoctorStrange.jpg" class="imagem-principal-resumo">
+						<div class="TextoGrid"><h2>Doctor Strange</h2>
+							<h6>Lançamento:13/10/2016   <span class="tab"></span> 1h55mins </h6>
+							<h6>Ação  </h6><!--Titulo, em pequeno data de lançamento, tempo (filme), duraçao de episodio e n de eps se for serie, e genero -->
+							<p>Doctor Strange (portugues: Doutor Estranho) é um filme de super-herói estadunidense de 2016, baseado no personagem homônimo 
+							da Marvel Comics, produzido pela Marvel Studios e distribuído pela Walt Disney Studios Motion Pictures. Foi dirigido por Scott Derrickson, 
+							que escreveu o roteiro ao lado de Jon Spaihts e C. Robert Cargill, sendo estrelado por Benedict Cumberbatch, Chiwetel Ejiofor, Rachel McAdams, 
+							Benedict Wong, Michael Stuhlbarg, Benjamin Bratt, Scott Adkins, Mads Mikkelsen e Tilda Swinton. É o décimo quarto filme do Universo Cinematográfico 
+							Marvel e o primeiro longa-metragem solo do personagem. Em Doutor Estranho, Stephen Strange aprende as artes misticas da Anciã, após um acidente de 
+							carro acabar com a sua carreira.</p>
+							<p>A estreia mundial de Doutor Estranho ocorreu em Hong Kong no dia 13 de outubro de 2016, sendo lançado nos Estados Unidos em 4 de novembro de 2016 
+							nos formatos 3D e IMAX 3D. Recebeu críticas geralmente favoráveis, destacando-se as performances do elenco, os efeitos visuais e a partitura musical, 
+							mas também recebeu críticas pela história básica de origem contada no filme.</p>
+							<p>Para mais informação visitar <a href="https://pt.wikipedia.org/wiki/Doutor_Estranho_(filme)">Doctor Strange wiki</a> ou 
+							<a href="https://www.imdb.com/title/tt1211837/?ref_=fn_al_tt_1">Doctor Strange IMDb</a> </p>
+						</div> <!-- video - controls + source src -> local e <iref para internet -->
+						<iframe width="800" height="519" src="https://www.youtube.com/embed/Lt-U_t2pUHI" title="Marvel's Doctor Strange Teaser Trailer" 
+						frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+						Internet em baixo</iframe>
+						<div class="slideshow">
+							<div class="slide-wrapper">
+								<div class="image-container"></div>
+								<div class="image-container"></div>
+								<div class="image-container"></div>
+								<div class="image-container"></div>
+							</div>
+						</div>
+					</fieldset>
+				</section>
+		</div>
+			<footer class="footer">
+				<div class="dataInfo">2022, Site de informação</div>
+				<span class="top-page"><!--alinhado a direita e padding para centrar -->
+				<button id="cima" onclick="topFunction()">topo</button><!--Meter a direita, botao para ir para cima -->
+			</footer>
+		</div>
+		<script>
+			window.onscroll = function() {myFunction()};
+			
+			var heads = document.getElementById("heads");
+			var sticky = heads.offsetTop;
+			
+			function myFunction() {
+			  if (window.pageYOffset >= sticky) {
+				heads.classList.add("sticky")
+			  } else {
+				heads.classList.remove("sticky");
+			  }
+			}
+			let mybutton = document.getElementById("cima");
+
+			window.onscroll = function() {scrollFunction()};
+
+			function scrollFunction() {
+			if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+				mybutton.style.display = "block";
+			} else {
+				mybutton.style.display = "none";
+			}
+			}
+
+			function topFunction() {
+			document.body.scrollTop = 0;
+			document.documentElement.scrollTop = 0;
+			}
+			</script>
+	</body>
+</html>

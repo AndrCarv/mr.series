@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
+		<meta lang="pt">
+		<title>Troy</title>
+			<!--testar -->	
+		<link rel="stylesheet" href="../../style/estilo.css"> 
+	</head>
+	<body>		
+	<div id="inicio"></div>
+		<div class="fundo">
+			<header id="heads" class="header">
+				<div class="headerbox-container"> <!-- Total do header todo -->
+					<div class="logo">  <!-- Manter no canto esquero em cima -->
+						<a href="../../Mr Series.html"><img src="../../Logo.png"></a>
+					</div>
+					<div class="main-nav"> <!--À direita logo aseguir ao logo (float:left) -->
+						<ul class="menu-principal"> <!--Alterar o link da homepage no fim-->
+							<li><a href="../../Mr Series.html" class="menu">Inicio</a></li> <!-- ../= move back 1 folder -->
+							<li><a href="../../Categorias.html" class="menu">Categorias</a></li>
+							<li><a href="../../Series.html" class="menu">Series</a></li>
+							<li><a href="../../Filmes.html" class="menu">Filmes</a></li>
+							<form method="get" id="searchform" action="*link do site">
+								<input type="text" placeholder="Procurar" name="s" id="s" autocomplete="off"> <!-- Os sites tem value mas n sei para que -->
+								<button class="search-button" type="submit"><span>Pesquisar</span></button>
+							</form>
+						</ul>
+					</div>
+				</div>
+			</header>
+				<section class="module" id="container" "> <!--Conteudo -->
+					<fieldset  class="grid"> <!-- fazer grid? -->
+						<img src="../../imagfilmes/Troy.jpg" class="imagem-principal-resumo">
+						<div class="TextoGrid"><h2>Troy</h2>
+							<h6>Lançamento:09/05/2004   <span class="tab"></span> 2h45mins </h6>
+							<h6>Ação  </h6><!--Titulo, em pequeno data de lançamento, tempo (filme), duraçao de episodio e n de eps se for serie, e genero -->
+							<p>Troy (portugues: Troia) é um filme épico britano-malto-estadunidense de 2004, dirigido por Wolfgang Petersen, com roteiro de 
+							David Benioff baseado no poema épico Ilíada, de Homero, sobre a Guerra de Troia. O filme apresenta um elenco liderado por Brad Pitt, 
+							Eric Bana e Orlando Bloom. Sua narração é vagamente baseada na totalidade da guerra de uma década, que é condensada em pouco mais de 
+							duas semanas, em vez de apenas a briga entre Aquiles e Agamenon no nono ano. Aquiles lidera seus mirmidões junto com o resto do 
+							exército grego invadindo a histórica cidade de Troia, defendida pelo exército troiano de Heitor. O final do filme (o saque de Troia) 
+							não é tirado da Ilíada, mas sim da Posthomerica de Quinto de Esmirna, pois a Ilíada termina com a morte e o funeral de Heitor.</p>
+							<p>Em 1193 a.C., o príncipe Páris provocou uma guerra contra Troia ao afastar Helena de seu marido, Menelau. Tem início então uma 
+							sangrenta batalha que dura uma década. A esperança do rei Príamo de Troia em vencer a guerra está nas mãos de seus filhos, Heitor 
+							que é um grande guerreiro e comanda o exército e de Páris, o mais jovem.</p>
+							<p>Para mais informação visitar <a href="https://pt.wikipedia.org/wiki/Troia_(filme)">Troy wiki</a> ou 
+							<a href="https://www.imdb.com/title/tt0332452/?ref_=fn_al_tt_1">Troy IMDb</a> </p>
+						</div> <!-- video - controls + source src -> local e <iref para internet -->
+						<iframe width="800" height="519"  src="https://www.youtube.com/embed/6FG3BfPuwBA" title="Troy - Original Theatrical Trailer" 
+						frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+						Internet em baixo</iframe>
+						<div class="slideshow">
+							<div class="slide-wrapper">
+								<div class="image-container"></div>
+								<div class="image-container"></div>
+								<div class="image-container"></div>
+								<div class="image-container"></div>
+							</div>
+						</div>
+					</fieldset>
+				</section>
+		</div>
+			<footer class="footer">
+				<div class="dataInfo">2022, Site de informação</div>
+				<span class="top-page"><!--alinhado a direita e padding para centrar -->
+				<button id="cima" onclick="topFunction()">topo</button><!--Meter a direita, botao para ir para cima -->
+			</footer>
+		</div>
+		<script>
+			window.onscroll = function() {myFunction()};
+			
+			var heads = document.getElementById("heads");
+			var sticky = heads.offsetTop;
+			
+			function myFunction() {
+			  if (window.pageYOffset >= sticky) {
+				heads.classList.add("sticky")
+			  } else {
+				heads.classList.remove("sticky");
+			  }
+			}
+			let mybutton = document.getElementById("cima");
+
+			window.onscroll = function() {scrollFunction()};
+
+			function scrollFunction() {
+			if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+				mybutton.style.display = "block";
+			} else {
+				mybutton.style.display = "none";
+			}
+			}
+
+			function topFunction() {
+			document.body.scrollTop = 0;
+			document.documentElement.scrollTop = 0;
+			}
+			</script>
+	</body>
+</html>

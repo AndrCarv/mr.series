@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
+		<meta lang="pt">
+		<title>Police Academy</title>
+			<!--testar -->	
+		<link rel="stylesheet" href="../../style/estilo.css"> 
+	</head>
+	<body>		
+	<div id="inicio"></div>
+		<div class="fundo">
+			<header id="heads" class="header">
+				<div class="headerbox-container"> <!-- Total do header todo -->
+					<div class="logo">  <!-- Manter no canto esquero em cima -->
+						<a href="../../Mr Series.html"><img src="../../Logo.png"></a>
+					</div>
+					<div class="main-nav"> <!--À direita logo aseguir ao logo (float:left) -->
+						<ul class="menu-principal"> <!--Alterar o link da homepage no fim-->
+							<li><a href="../../Mr Series.html" class="menu">Inicio</a></li> <!-- ../= move back 1 folder -->
+							<li><a href="../../Categorias.html" class="menu">Categorias</a></li>
+							<li><a href="../../Series.html" class="menu">Series</a></li>
+							<li><a href="../../Filmes.html" class="menu">Filmes</a></li>
+							<form method="get" id="searchform" action="*link do site">
+								<input type="text" placeholder="Procurar" name="s" id="s" autocomplete="off"> <!-- Os sites tem value mas n sei para que -->
+								<button class="search-button" type="submit"><span>Pesquisar</span></button>
+							</form>
+						</ul>
+					</div>
+				</div>
+			</header>
+				<section class="module" id="container" "> <!--Conteudo -->
+					<fieldset  class="grid"> <!-- fazer grid? -->
+						<img src="../../imagfilmes/PoliceAcademy.jpg" class="imagem-principal-resumo" alt="Erro no atalho para imagem">
+						<div class="TextoGrid"><h2>Police Academy</h2>
+							<h6>Lançamento:21/09/1984	   <span class="tab"></span> 1h36mins </h6>
+							<h6>Comedia  </h6><!--Titulo, em pequeno data de lançamento, tempo (filme), duraçao de episodio e n de eps se for serie, e genero -->
+							<p>Police Academy (Brasil: Loucademia de Polícia / Portugal: Academia de Polícia) é um filme de comédia policial americano de 1984, 
+							dirigido por Hugh Wilson e distribuído pela Warner Bros. Pictures.[1][2] O filme gerou mais sete sequências, além de uma série animada e 
+							ganhou o status de clássico cult desde seu lançamento.</p>
+							<p>Com o aumento da criminalidade, a nova prefeita da cidade determina que o departamento de polícia passe a aceitar todos os recrutas 
+							voluntários, independentemente de sexo, peso corporal, cor da pele ou idade. Porém, a nova medida não agrada a todos. O personagem principal, 
+							Carey Mahoney, é um delinquente que é forçado a aderir à academia de polícia como alternativa à prisão, proposta feito pelo capitão por ser 
+							amigo de seu pai. Mahoney, com relutância, aceita a proposta.</p>
+							<p>Police Academy tem recepção mista por parte da crítica especializada. Possui tomatometer de 41% em base de 17 críticas no Rotten Tomatoes. 
+							Tem 64% de aprovação por parte da audiência, usada para calcular a recepção do público a partir de votos dos usuários do site.</p>
+							<p>Para mais informação visitar <a href="https://pt.wikipedia.org/wiki/Police_Academy">Police Academy wiki</a> ou 
+							<a href="https://www.imdb.com/title/tt0087928/?ref_=nv_sr_srsg_0">Police Academy IMDb</a> </p>
+						</div> <!-- video - controls + source src -> local e <iref para internet -->
+						<iframe width="800" height="519" src="https://www.youtube.com/embed/4NT4C1F_HZE" title="Police Academy (1984) Official Trailer - 
+						Steve Guttenberg Crime Comedy HD" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+						allowfullscreen>
+						Internet em baixo</iframe>
+						<!-- Verificar como funcionar-->
+						<div class="slideshow">
+							<div class="slide-wrapper">
+								<div class="image-container"></div>
+								<div class="image-container"></div>
+								<div class="image-container"></div>
+								<div class="image-container"></div>
+							</div>
+						</div>
+					</fieldset>
+				</section>
+		</div>
+			<footer class="footer">
+				<div class="dataInfo">2022, Site de informação</div>
+				<span class="top-page"><!--alinhado a direita e padding para centrar -->
+				<button id="cima" onclick="topFunction()">topo</button><!--Meter a direita, botao para ir para cima -->
+			</footer>
+		</div>
+		<script>
+			window.onscroll = function() {myFunction()};
+			
+			var heads = document.getElementById("heads");
+			var sticky = heads.offsetTop;
+			
+			function myFunction() {
+			  if (window.pageYOffset >= sticky) {
+				heads.classList.add("sticky")
+			  } else {
+				heads.classList.remove("sticky");
+			  }
+			}
+			let mybutton = document.getElementById("cima");
+
+			window.onscroll = function() {scrollFunction()};
+
+			function scrollFunction() {
+			if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+				mybutton.style.display = "block";
+			} else {
+				mybutton.style.display = "none";
+			}
+			}
+
+			function topFunction() {
+			document.body.scrollTop = 0;
+			document.documentElement.scrollTop = 0;
+			}
+			</script>
+	</body>
+</html>
