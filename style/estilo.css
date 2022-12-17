@@ -340,10 +340,9 @@ img{
 fieldset{
 	display: flex;
 	flex-wrap: wrap;
-}
 iframe{
 	display: flex;
 	flex-wrap:wrap;
-	width:auto; 
-	height:auto;
+	max-width:60%; 
+	height:250px;
 }
