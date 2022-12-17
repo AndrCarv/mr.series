@@ -344,4 +344,6 @@ fieldset{
 iframe{
 	display: flex;
 	flex-wrap:wrap;
+	width:auto; 
+	height:auto;
 }
