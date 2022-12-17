@@ -137,8 +137,11 @@ input[type=text]:focus {
     background-color: transparent;
     width: 300px;
     height: 200px;
+	max-height:100%;
+	max-width:100%;
     border: 1px solid #f1f1f1;
-    perspective: 1000px;
+	padding-left:0%;
+	padding-right:0%;
 	
 }
 
@@ -146,8 +149,8 @@ input[type=text]:focus {
 .filmes,
 .series {
 	position: relative;
-	width: 100%;
-	height: 100%;
+	width: 300%;
+	height: 100%; /*testar */
 	text-align: center;
 	transition: transform 0.8s;
 	transform-style: preserve-3d;
@@ -198,8 +201,9 @@ input[type=text]:focus {
   }
 
 fieldset div div div a img{
-    width: 300px;
     height: 200px;
+	max-width:70%;
+	min-width:100%;
 }
 
 /* rodapé */
@@ -242,6 +246,8 @@ fieldset div div div a img{
 .imagem-principal-resumo{
 	width: 350px;
 	height:300px;
+	max-height:80%;
+	max-width:50%;
 	align-items:left;
 	padding-right:0px;
 	border-radius:5px;
@@ -259,10 +265,11 @@ fieldset div div div a img{
 	grid-row-gap: 0px;
 	grid-template-columns: repeat(auto-fit);
 	grid-template-rows: repeat(1fr, minmax(250px, 1fr));
-	margin-left:200px;
-	margin-right:100px;
-	margin-top:10px;
-	margin-bottom:10px;
+	width:80%;
+	margin-left:10%;
+	margin-right:10%;
+	margin-top:1%;
+	margin-bottom:1%;
 }
 /*Fim de teste para grid */
 .tab{ /*fazer um tab */ 
@@ -271,23 +278,22 @@ fieldset div div div a img{
 }
  /* Ate aqui*/ 
  /*Slider por modificar para ver se funciona*/
- .slideshow{
+/* .slideshow{
 	 overflow: hidden;
 	 height:500px;
 	 width:728px;
 	 margin:0 auto;
- }
+ }*//*
  .slidewrapper{
 	 width:3000xp;
 	 animation:slide 20s infinite;
- }
+ }*//*
  .image-container{
 	 margin-top:50px;
 	 float:left;
 	 height:500px;
 	 width:728px;
- }
- 
+ }*/
  /* Testar containers */
 /* Meti manualmente para testar */
  .containerImagems{ /* Fazer o espaçamento em todas as paginas para o conteudo */ 
@@ -296,10 +302,11 @@ fieldset div div div a img{
 	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 	grid-template-rows: repeat(1fr, minmax(250px, 1fr));
 	justify-content:start;
-	margin-left:200px;
-	margin-right:100px;
-	margin-top:10px;
-	margin-bottom:10px;
+	width:80%;
+	margin-left:10%;
+	margin-right:10%;
+	margin-top:1%;
+	margin-bottom:1%;
 	
 }
 
@@ -311,7 +318,7 @@ h4{
 
 	display:flex;
 	grid-row:2;
-	margin-bottom:10px;
+	margin-bottom:5%;
 
 }
 .row2 { 
@@ -334,10 +341,6 @@ h4{
 }
 
 img{
-	display: flex;
-	flex-wrap: wrap;
-}
-fieldset{
 	display: flex;
 	flex-wrap: wrap;
 }
