@@ -15,6 +15,7 @@ header div div a img{
     height: 70px; 
 }
 
+
 /* barra de navegação */
 .header {
     background-color: #f1f1f1;
@@ -184,6 +185,7 @@ input[type=text]:focus {
   }
   
   @media screen and (max-width: 900px) {
+
     .column  {
       width: 50%;
     }
@@ -244,18 +246,19 @@ fieldset div div div a img{
 	padding-right:0px;
 	border-radius:5px;
 	position:static;
-
-
 }
 .TextoGrid{
 	align-items:left;
 	box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.1);
-}
+} 
+/*testar*/
+
 .grid{
 	display:grid;
 	grid-column-gap:0px;
 	grid-row-gap: 0px;
 	grid-template-columns: repeat(auto-fit);
+	grid-template-rows: repeat(1fr, minmax(250px, 1fr));
 	margin-left:200px;
 	margin-right:100px;
 	margin-top:10px;
@@ -328,4 +331,17 @@ h4{
 	grid-row:5;
 	margin-bottom:10px;
 
+}
+
+img{
+	display: flex;
+	flex-wrap: wrap;
+}
+fieldset{
+	display: flex;
+	flex-wrap: wrap;
+}
+iframe{
+	display: flex;
+	flex-wrap:wrap;
 }
