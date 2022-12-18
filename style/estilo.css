@@ -207,7 +207,7 @@ input[type=text]:focus {
     }
   }
 
-fieldset div div div div div a img{
+fieldset div div div a img{
 	display:flex;
 	flex-wrap:wrap;
 	position:relative;
