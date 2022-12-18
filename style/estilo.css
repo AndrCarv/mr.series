@@ -328,7 +328,6 @@ h4{ /*coluna 1 a 4 para os outros manter os mesmo tamanho */
 	flex-wrap:wrap;
 	position: relative;
 	grid-row:2/3;
-	grid-column:auto;
 	margin-bottom:5%;
 
 }
