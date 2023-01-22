@@ -17,6 +17,7 @@
 					<div class="main-nav"> <!--À direita logo aseguir ao logo (float:left) -->
 						<ul class="menu-principal"> <!--Alterar o link da homepage no fim-->
 							<li><a href="../../index.html" class="menu">Inicio</a></li> <!-- ../= move back 1 folder -->
+							<li><a href="../../sobre.html" class="menu">Sobre</a></li>
 							<li><a href="../../Categorias.html" class="menu">Categorias</a></li>
 							<li><a href="../../Series.html" class="menu">Series</a></li>
 							<li><a href="../../Filmes.html" class="menu">Filmes</a></li>
@@ -45,15 +46,25 @@
 						<a href="https://www.imdb.com/title/tt9419884/?ref_=nv_sr_srsg_1">Doctor Strange: Multiverse of Madness IMDb</a> </p>
 					</div>
 					<div class="clearfix"></div>
-					<div>
-						<iframe src="https://www.youtube.com/embed/aWzlQ2N6qqg" title="Marvel Studios' Doctor Strange in the Multiverse of Madness | 
-						Official Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-						allowfullscreen>
-						Internet em baixo</iframe>
-					</div>
+					<content class="mediaContainer">
+						<div>
+							<iframe src="https://www.youtube.com/embed/aWzlQ2N6qqg" title="Marvel Studios' Doctor Strange in the Multiverse of Madness | 
+							Official Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+							allowfullscreen>
+							Internet em baixo</iframe>
+						</div>
+						<div class="slider">
+							<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+							<a class="next" onclick="plusSlides(1)">&#10095;</a>
+							<img src="strangemom1.jpg" class="slid">
+							<img src="strangemom2.jpg" class="slid">
+							<img src="strangemom4.jpg" class="slid">
+							<img src="strangemom3.jpg" class="slid">
+						</div>
+					</content>
 				</section>
 			<footer class="footer">
-				<div class="dataInfo">2022, Site de informação</div>
+				<div class="dataInfo">2022/2023, Site de informação</div>
 				<span class="top-page"><!--alinhado a direita e padding para centrar --></span>
 				<button id="cima" onclick="topFunction()">topo</button><!--Meter a direita, botao para ir para cima -->
 			</footer>
@@ -86,6 +97,28 @@
 			function topFunction() {
 			document.body.scrollTop = 0;
 			document.documentElement.scrollTop = 0;
+			}
+			/*Slider*/
+			var slideIndex = 1;
+			showSlides(slideIndex);
+
+			function plusSlides(n) {
+			  showSlides(slideIndex += n);
+			}
+
+			function currentSlide(n) {
+			  showSlides(slideIndex = n);
+			}
+
+			function showSlides(n) {
+			  var i;
+			  var slides = document.getElementsByClassName("slid");
+			  if (n > slides.length) {slideIndex = 1}
+			  if (n < 1) {slideIndex = slides.length}
+			  for (i = 0; i < slides.length; i++) {
+				  slides[i].style.display = "none";
+			  }
+			  slides[slideIndex-1].style.display = "block";
 			}
 			</script>
 	</body>
