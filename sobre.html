@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
+		<meta lang="pt">
+		<title>Sobre</title>
+		<link rel="stylesheet" href="style/estilo.css"> 
+	</head>
+	<body>
+		<div id="inicio"></div>
+		<div class="fundo">
+			<header id="heads" class="header">
+				<div class="headerbox-container"> <!-- Total do header todo -->
+					<div class="logo">  <!-- Manter no canto esquero em cima -->
+						<a href="index.html"><img src="Logo.png" alt="erro a ler a imagem"></a>
+					</div>
+					<div class="main-nav"> <!--À direita logo aseguir ao logo (float:left) -->
+						<ul class="menu-principal">
+							<li><a href="index.html" class="menu">Inicio</a></li>
+							<li><a href="sobre.html" class="menu">Sobre</a></li>
+							<li><a href="Categorias.html" class="menu">Categorias</a></li>
+							<li><a href="Series.html" class="menu">Series</a></li>
+							<li><a href="Filmes.html" class="menu">Filmes</a></li>
+							<form method="get" id="searchform" action="*link do site">
+								<input type="text" placeholder="Procurar" name="s" id="s" autocomplete="off"> <!-- Os sites tem value mas n sei para que -->
+								<button class="search-button" type="submit"><span>Pesquisar</span></button>
+							</form>
+						</ul>
+					</div>
+				</div>
+			</header>
+			<body>
+				<section class="fieldInfo">
+				<img src="ESTB.png" class="imagem-principal-resumo">
+				<h3>Sobre</h3>
+				<article>
+					<p>Trabalho realizado em ambito escolar, as imagens das series foram tirados do google e sites de reviews, 
+					os links de videos são os trailers no youtube, e a informação escrita foi removido de sites de reviews, wiki e
+					sites officiais de lore, toda a informação desde texto, imagens e videos são usados para informar as pessoas 
+					das series sem contar demais.</p><br>
+					<p>Este trabalho foi realizado para a disciplina de IPW (Introdução a Programação Web)
+					pelos alunos: <br>André Carvalho <span class="tab">Nº202200878</span> <br>José da Silva<span class="tab"><span class="tab">Nº202200892</span></span></p>
+				<article>
+				</section>
+			</body>
+				<footer class="footer">
+					<div class="dataInfo">2022/2023, Site de informação</div>
+					<span class="top-page"><!--alinhado a direita e padding para centrar --></span>
+					<button id="cima" onclick="topFunction()">topo</button><!--Meter a direita, botao para ir para cima -->
+				</footer>
+			</div>
+		<script>
+			window.onscroll = function() {myFunction()};
+			
+			var heads = document.getElementById("heads");
+			var sticky = heads.offsetTop;
+			
+			function myFunction() {
+			  if (window.pageYOffset >= sticky) {
+				heads.classList.add("sticky")
+			  } else {
+				heads.classList.remove("sticky");
+			  }
+			}
+			let mybutton = document.getElementById("cima");
+
+			window.onscroll = function() {scrollFunction()};
+
+			function scrollFunction() {
+			if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+				mybutton.style.display = "block";
+			} else {
+				mybutton.style.display = "none";
+			}
+			}
+
+			function topFunction() {
+			document.body.scrollTop = 0;
+			document.documentElement.scrollTop = 0;
+			}
+			</script>
+	</body>
+</html>
